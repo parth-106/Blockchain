@@ -1,0 +1,28 @@
+pragma solidity ^0.4.17;
+
+contract Student_Report{
+    string public name;
+    uint public rollno;
+    string public batch;
+    uint public javaScript;
+    uint public java;
+    uint public blockchain;
+    uint public android;
+    string public status;
+    
+    function Student_Report(string newName, uint newRollno, string newBatch, uint newJavaScript, uint newJava, uint newBlockchain, uint newAndroid, string newStatus)public{
+        name = newName;
+        rollno = newRollno;
+        batch = newBatch;
+        javaScript = newJavaScript;
+        java = newJava;
+        blockchain = newBlockchain;
+        android= newAndroid;
+        status = newStatus;
+    }
+    
+    function get_Student_Details() public view returns(string, uint, string , uint, uint, uint, uint, string){
+        return(name, rollno, batch, javaScript, java, blockchain, android, status);
+    }
+    
+}
